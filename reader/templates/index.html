@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet"  href="{% static 'css/style.css' %}">
   <title>AILicenseReader</title>
 </head>
 
@@ -41,56 +41,57 @@
 
     </form>
 
-    <div class="item">
+    <div class="container">      
       <div class="table">
+        <h3>読込結果</h3>
         <table class="item-table">
           <tr>
-            <th class="tableheader1"></th>
-            <td class="cell1"></td>
+            <th class="th-beige">交付日</th>
+            <td class="td-beige">2024年6月4日</td>
           </tr>
           <tr>
-            <th class="tableheader"></th>
-            <td class="cell"></td>
+            <th>記号</th>
+            <td>2170023</td>
           </tr>
           <tr>
-            <th class="tableheader1"></th>
-            <td class="cell1"></td>
+            <th class="th-beige">番号</th>
+            <td class="td-beige">1</td>
           </tr>
           <tr>
-            <th class="tableheader"></th>
-            <td class="cell"></td>
+            <th>枝番</th>
+            <td>00</td>
           </tr>
           <tr>
-            <th class="tableheader1"></th>
-            <td class="cell1"></td>
+            <th class="th-beige">氏名</th>
+            <td class="td-beige">協会 太郎</td>
           </tr>
           <tr>
-            <th class="tableheader"></th>
-            <td class="cell"></td>
+            <th>生年月日</th>
+            <td>平成元年5月10日</td>
           </tr>
           <tr>
-            <th class="tableheader1"></th>
-            <td class="cell1"></td>
+            <th class="th-beige">性別</th>
+            <td class="td-beige">男</td>
           </tr>
           <tr>
-            <th class="tableheader"></th>
-            <td class="cell"></td>
+            <th>資格取得年月日</th>
+            <td>令和2年4月1日</td>
           </tr>
           <tr>
-            <th class="tableheader1"></th>
-            <td class="cell1"></td>
+            <th class="th-beige">事業所名称</th>
+            <td class="td-beige">株式会社〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</td>
           </tr>
           <tr>
-            <th class="tableheader"></th>
-            <td class="cell"></td>
+            <th>保険者番号</th>
+            <td>99999999</td>
           </tr>
           <tr>
-            <th class="tableheader1"></th>
-            <td class="cell1"></td>
+            <th class="th-beige">保険者名称</th>
+            <td class="td-beige">全国健康保険協会 〇〇〇〇支部</td>
           </tr>
           <tr>
-            <th class="tableheader"></th>
-            <td class="cell"></td>
+            <th>保険者所在地</th>
+            <td>静岡県駿東郡清水町伏見385-2</td>
           </tr>
         </table>
       </div>
@@ -111,7 +112,10 @@
   </main>
 
   <footer>
-    <span id="copyright">&copy;2024-ace-techno.co.ltd お問い合わせ：s.uehara@ace-techno.com</span>
+    <p id="copyright">
+      お問い合わせ：<a href="mailto:s.uehara@ace-techno.com?subject=AI License Reader お問い合わせ">s.uehara@ace-techno.com</a><br>
+      &copy;2024-ace-techno.co.ltd
+    </p>
   </footer>
 
 </body>

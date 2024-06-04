@@ -98,37 +98,36 @@ main > form > div > button {
   border: 0;
 }
 
-.table {
-  float: left;   
+.container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
-.item {
-  overflow:  hidden;
+.item-table {
+  border-spacing: 3px;
 }
 
-.tableheader1 {
-  background-color: #E5DDC5;
+.th-beige {
+  background-color: #E5DDC5;  
 }
 
-.tableheader {
+th {
   width: 150px;
-  height: 25px;
+  height: 30px;
+  text-align: left;
+  font-weight: normal;
+  padding-left: 10px;
 }
 
-.tableheader1 {
-  width: 150px;
-  height: 25px;
+.td-beige {
+  background: #E5DDC5;  
 }
 
-.cell1 {
-  background: #E5DDC5;
+td {
   width: 380px;
   height: 25px;
-}
-
-.cell1 {
-  width: 380px;
-  height: 25px;
+  padding-left: 10px;
 }
 
 footer {
@@ -147,7 +146,12 @@ footer {
   margin: 5px 0 0 0;
 }
 
-footer > span {
+footer {
+  padding: 50px 0;
+}
+
+footer > p {
   color: #ffffff;
-  font-size: 15px;
+  font-size: 16px;
+  line-height: 2; 
 }
