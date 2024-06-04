@@ -1,0 +1,13 @@
+2024-05-26 23:48:02,119	[INFO]	C:\Users\sueha\venv_license_reader\lib\site-packages\django\utils\autoreload.py(Line:668)	Watching for file changes with StatReloader
+2024-05-26 23:51:32,529	[INFO]	C:\Users\sueha\venv_license_reader\lib\site-packages\django\utils\autoreload.py(Line:668)	Watching for file changes with StatReloader
+2024-05-26 23:51:34,718	[INFO]	C:\Users\sueha\venv_license_reader\lib\site-packages\django\core\servers\basehttp.py(Line:212)	"GET / HTTP/1.1" 200 2890
+2024-05-26 23:51:34,741	[WARNING]	C:\Users\sueha\venv_license_reader\lib\site-packages\django\utils\log.py(Line:241)	Not Found: /css/style.css
+2024-05-26 23:51:34,741	[WARNING]	C:\Users\sueha\venv_license_reader\lib\site-packages\django\utils\log.py(Line:241)	Not Found: /image/アップロード.png
+2024-05-26 23:51:34,742	[WARNING]	C:\Users\sueha\venv_license_reader\lib\site-packages\django\core\servers\basehttp.py(Line:212)	"GET /css/style.css HTTP/1.1" 404 2285
+2024-05-26 23:51:34,742	[WARNING]	C:\Users\sueha\venv_license_reader\lib\site-packages\django\core\servers\basehttp.py(Line:212)	"GET /image/%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89.png HTTP/1.1" 404 2366
+2024-05-26 23:51:34,758	[WARNING]	C:\Users\sueha\venv_license_reader\lib\site-packages\django\utils\log.py(Line:241)	Not Found: /favicon.ico
+2024-05-26 23:51:34,758	[WARNING]	C:\Users\sueha\venv_license_reader\lib\site-packages\django\core\servers\basehttp.py(Line:212)	"GET /favicon.ico HTTP/1.1" 404 2279
+2024-05-26 23:59:46,648	[INFO]	C:\Users\sueha\venv_license_reader\lib\site-packages\django\utils\autoreload.py(Line:668)	Watching for file changes with StatReloader
+2024-05-26 23:59:48,569	[INFO]	C:\Users\sueha\venv_license_reader\lib\site-packages\django\core\servers\basehttp.py(Line:212)	"GET / HTTP/1.1" 200 2937
+2024-05-26 23:59:48,582	[INFO]	C:\Users\sueha\venv_license_reader\lib\site-packages\django\core\servers\basehttp.py(Line:212)	"GET /static/css/style.css HTTP/1.1" 200 2318
+2024-05-26 23:59:48,582	[INFO]	C:\Users\sueha\venv_license_reader\lib\site-packages\django\core\servers\basehttp.py(Line:212)	"GET /static/image/%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89.png HTTP/1.1" 200 62000

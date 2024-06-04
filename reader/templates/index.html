@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <title>AILicenseReader</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>
+      <a href="#">AI License Reader</a>
+    </h1>
+  </header>
+
+  <main>
+    <form>
+      <h3>書類の種類</h3>
+      <select name="license" class="license">
+        <option value="license1">保険証</option>
+        <option value="license2">運転免許証</option>
+        <option value="license3">電気工事士資格証</option>
+      </select>
+      <h3>読込画像の選択</h3>
+
+      <!-- フォーム -->
+      <input type="file" name="logo" class="form" accept=".jpg, .jpeg, .png, .gif">
+
+      <!-- フォームで選択した画像を表示するimgタグ -->
+      <img id="img" src="{% static 'image/アップロード.png' %}">
+
+      <div class="readbtn">
+        <button type="button">
+          <a class="btn">画像読込</a>
+        </button>
+      </div>
+
+    </form>
+
+    <div class="item">
+      <div class="table">
+        <table class="item-table">
+          <tr>
+            <th class="tableheader1"></th>
+            <td class="cell1"></td>
+          </tr>
+          <tr>
+            <th class="tableheader"></th>
+            <td class="cell"></td>
+          </tr>
+          <tr>
+            <th class="tableheader1"></th>
+            <td class="cell1"></td>
+          </tr>
+          <tr>
+            <th class="tableheader"></th>
+            <td class="cell"></td>
+          </tr>
+          <tr>
+            <th class="tableheader1"></th>
+            <td class="cell1"></td>
+          </tr>
+          <tr>
+            <th class="tableheader"></th>
+            <td class="cell"></td>
+          </tr>
+          <tr>
+            <th class="tableheader1"></th>
+            <td class="cell1"></td>
+          </tr>
+          <tr>
+            <th class="tableheader"></th>
+            <td class="cell"></td>
+          </tr>
+          <tr>
+            <th class="tableheader1"></th>
+            <td class="cell1"></td>
+          </tr>
+          <tr>
+            <th class="tableheader"></th>
+            <td class="cell"></td>
+          </tr>
+          <tr>
+            <th class="tableheader1"></th>
+            <td class="cell1"></td>
+          </tr>
+          <tr>
+            <th class="tableheader"></th>
+            <td class="cell"></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="itembtn">
+        <div>
+          <button type="button">
+            <a class="btn1">CSVダウンロード</a>
+          </button>
+        </div>
+        <div>
+          <button type="button">
+            <a class="btn2">PDFダウンロード</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <span id="copyright">&copy;2024-ace-techno.co.ltd お問い合わせ：s.uehara@ace-techno.com</span>
+  </footer>
+
+</body>
+
+</html>
