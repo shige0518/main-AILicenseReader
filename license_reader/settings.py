@@ -139,31 +139,27 @@ LOGGING ={
     'loggers':{
         # Djangoが利用するロガー
         'django':{
-            'handlers':['file'],
+            'handlers':['console'],
             'level':'INFO',
         },
         # readerアプリケーションが利用するロガー
         'reader':{
-            'handlers': ['file'],
+            'handlers': ['console'],
             'level':'INFO',
         },
     },
 
     #ハンドラの設定
     'handlers':{
-        'file':{
-            'level':'INFO',
-            'class':'logging.handlers.TimedRotatingFileHandler',
-            'filename': os.path.join(BASE_DIR,'logs/django.log'),
-            'formatter': 'prod',
-            'when': 'D', # ログローテーション（新しいファイルへの切り替え）間隔の単位（D＝日）
-            'interval': 1,  #ログテーション間隔（一日単位）
-            'backupCount': 7,
+        'console':{
+            'level':'DEBUG',
+            'class':'logging.StreamHandler',
+            'formatter': 'dev',
         },
     },
     # フォーマッターの設定
     'formatters':{
-        'prod':{
+        'dev':{
             'format':'\t'.join([
                 '%(asctime)s',
                 '[%(levelname)s]',
@@ -179,3 +175,6 @@ STATICFILES_DIRS = (
         os.path.join(BASE_DIR, "static"),
     ]
 )
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")

@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet"  href="{% static 'css/style.css' %}">
+  <script src="{% static 'js/image.js' %}"></script>
   <title>AILicenseReader</title>
 </head>
 
@@ -20,23 +21,25 @@
   <main>
     <form>
       <h3>書類の種類</h3>
-      <select name="license" class="license">
+      {% comment %} <select name="license" class="license">
         <option value="license1">保険証</option>
         <option value="license2">運転免許証</option>
         <option value="license3">電気工事士資格証</option>
-      </select>
-      <h3>読込画像の選択</h3>
+      </select> {% endcomment %}
+      {{ form.license_type }}      
+      {% csrf_token %}
+      <h3>読込画像の選択</h3>     
 
       <!-- フォーム -->
-      <input type="file" name="logo" class="form" accept=".jpg, .jpeg, .png, .gif">
+      <input type="file" name="logo" class="form" accept=".jpg, .jpeg, .png, .gif">      
 
       <!-- フォームで選択した画像を表示するimgタグ -->
-      <img id="img" src="{% static 'image/アップロード.png' %}">
+      <img id="img" accept="image/*" src="{% form.license_type %} ">
+
+      
 
       <div class="readbtn">
-        <button type="button">
-          <a class="btn">画像読込</a>
-        </button>
+        <button type="submit">画像読込</button>
       </div>
 
     </form>
