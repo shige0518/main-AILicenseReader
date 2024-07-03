@@ -26,15 +26,20 @@
         <option value="license2">運転免許証</option>
         <option value="license3">電気工事士資格証</option>
       </select> {% endcomment %}
-      {{ form.license_type }}      
-      {% csrf_token %}
+
+      {{ form.license_type }}
+
       <h3>読込画像の選択</h3>     
 
       <!-- フォーム -->
-      <input type="file" name="logo" class="form" accept=".jpg, .jpeg, .png, .gif">      
+      <!-- <input type="file" name="logo" class="form" accept=".jpg, .jpeg, .png, .gif"> -->  
 
+      {{ form.file }}
+      {% csrf_token %}
+      
       <!-- フォームで選択した画像を表示するimgタグ -->
-      <img id="img" accept="image/*" src="{% form.license_type %} ">
+
+      <img id="img" accept="image/*" src="{{ download_url }}">
 
       
 

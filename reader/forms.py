@@ -15,12 +15,12 @@ class ReaderForm(forms.Form):
             ('license2', '運転免許証'),
             ('license3', '電気工事士資格証')
         ),
-        required=True
+        required=True)
     
     def analyze(self):
         logger.info(self.cleaned_data['license_type'])
 
-    file = forms.ImageField(label='読込画像の選択')
+    file = forms.ImageField(label='サンプル画像')
 
     def save(self):
         upload_file = self.cleaned_data['file']
