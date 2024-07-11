@@ -19,7 +19,7 @@
   </header>
 
   <main>
-    <form>
+    <form action="" method="POST" enctype="multipart/form-data">
       <h3>書類の種類</h3>
       {% comment %} <select name="license" class="license">
         <option value="license1">保険証</option>
@@ -28,21 +28,19 @@
       </select> {% endcomment %}
 
       {{ form.license_type }}
-
+      
       <h3>読込画像の選択</h3>     
 
       <!-- フォーム -->
-      <!-- <input type="file" name="logo" class="form" accept=".jpg, .jpeg, .png, .gif"> -->  
-
+      <!-- <input type="file" name="logo" class="form" accept=".jpg, .jpeg, .png, .gif"> -->         
       {{ form.file }}
       {% csrf_token %}
-      
       <!-- フォームで選択した画像を表示するimgタグ -->
-
-      <img id="img" accept="image/*" src="{{ download_url }}">
-
-      
-
+      {% if download_url %}
+        <img id="img" accept="image/*" src="{{ download_url }}">        
+      {% else %}
+        <img id="img" accept="image/*" src="{% static 'image/noimage.png' %}">        
+      {% endif %}
       <div class="readbtn">
         <button type="submit">画像読込</button>
       </div>
