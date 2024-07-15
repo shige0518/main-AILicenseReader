@@ -8,7 +8,7 @@ from django.core.files.storage import default_storage
 
 logger = logging.getLogger(__name__)
 
-class ReaderForm(forms.Form):
+class ReaderForm(forms.Form):    
     license_type = forms.ChoiceField(
         choices=(
             ('license1', '保険証'),
@@ -22,12 +22,16 @@ class ReaderForm(forms.Form):
 
     file = forms.ImageField(label='サンプル画像')
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['file'].widget.attrs['class'] = 'file'
+
     def save(self):
         upload_file = self.cleaned_data['file']
         file_name = default_storage.save(upload_file.name, upload_file)
         return default_storage.url(file_name)
 
-    
+     
 
 
     

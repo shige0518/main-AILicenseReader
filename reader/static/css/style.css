@@ -52,15 +52,15 @@ main > form > select {
 
 
 
-/* HTMLからの変数にどう設定するか
-form.file {
+
+input.file {
   font-weight: bold;
   color: rgb(13, 13, 13);
   background: #E5DDC5;  
   border: 0;
   border-radius: 8px;
   padding: 1em;  
-}*/
+}
 
 input.form {
   width: 70%;
